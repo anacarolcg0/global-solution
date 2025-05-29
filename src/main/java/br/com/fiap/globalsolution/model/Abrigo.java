@@ -10,7 +10,8 @@ public class Abrigo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAbrigo;
-    private String endereco;
+    @Enumerated(EnumType.STRING)
+    private Bairro bairro;
     private String cep;
     private Integer qtdVagas;
     private List<Voluntario> voluntarios;
@@ -23,12 +24,12 @@ public class Abrigo {
         this.idAbrigo = idAbrigo;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public Bairro getBairro() {
+        return bairro;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setBairro(Bairro bairro) {
+        this.bairro = bairro;
     }
 
     public String getCep() {

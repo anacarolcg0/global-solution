@@ -13,13 +13,13 @@ public class Pessoa {
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
-    private String endereco;
+    @Enumerated(EnumType.STRING)
+    private Bairro bairro;
     private String cidade = "São Paulo";
     private String estado = "SP";
     private String profissao;
     @Enumerated(EnumType.STRING)
     private TipoDeficiencia pcd;
-    private String senha;
 
     public Long getIdPessoa() {
         return idPessoa;
@@ -53,12 +53,12 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public Bairro getBairro() {
+        return bairro;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setBairro(Bairro bairro) {
+        this.bairro = bairro;
     }
 
     public String getCidade() {
@@ -91,13 +91,5 @@ public class Pessoa {
 
     public void setPcd(TipoDeficiencia pcd) {
         this.pcd = pcd;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 }
