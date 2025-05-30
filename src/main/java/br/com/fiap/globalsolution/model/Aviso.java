@@ -14,7 +14,7 @@ public class Aviso {
     private Ocorrencia ocorrencia;
     @Enumerated(EnumType.STRING)
     private Gravidade gravidade;
-    private String localizacao;
+    private Bairro bairro;
     private LocalDateTime dataHora;
 
     public Long getIdAviso() {
@@ -41,12 +41,12 @@ public class Aviso {
         this.gravidade = gravidade;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
+    public Bairro getBairro() {
+        return bairro;
     }
 
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
+    public void setBairro(Bairro bairro) {
+        this.bairro = bairro;
     }
 
     public LocalDateTime getDataHora() {
